@@ -1,6 +1,5 @@
-# V1.0.0 - 2023-01-18
+# v1.0.0 - 2023-01-18
 
-feat: first release
+Added
+  * First release
 
-BREAKING CHANGE:
-- First Major Template release
