@@ -9,7 +9,7 @@ content: |-
   # Examples
 
   ```hcl
-  {{ include "examples/example1/module.tf" }}
+  {{ include "examples/resource-group-example/module.tf" }}
   ```
   {{ .Providers }}
 
