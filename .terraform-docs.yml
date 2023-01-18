@@ -1,0 +1,41 @@
+formatter: markdown table
+
+header-from: "docs/header-doc.tf"
+footer-from: "docs/footer-doc.tf" 
+
+content: |-
+  {{ .Header }}
+
+  # Examples
+
+  ```hcl
+  {{ include "examples/example1/module.tf" }}
+  ```
+  {{ .Providers }}
+
+  {{ .Modules }}
+
+  {{ .Resources }}
+
+  {{ .Inputs }}  
+
+  {{ .Outputs }}
+
+  {{ .Footer }}
+
+output:
+  file: README.md
+  mode: inject
+
+sort:
+  enabled: true
+  by: required
+
+settings:
+  anchor: false
+  color: true
+  default: false
+  description: true
+  indent: 2
+  required: true
+  type: true
