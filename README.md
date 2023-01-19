@@ -9,10 +9,10 @@ module "resource_group" {
   source  = "TheIronRock95/resourcegroup/azurerm"
   version = "x.x.x"
 
-  count               = var.number_of_resource_groups
   resource_group_name = var.resource_group_name
   azure_location      = var.azure_location
 }
+
 ```
 ## Providers
 
@@ -36,8 +36,7 @@ No modules.
 |------|-------------|------|:--------:|
 | azure\_location | The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created. | `string` | yes |
 | resource\_group\_name | The Name which should be used for this Resource Group. Changing this forces a new Resource Group to be created. | `list(string)` | yes |
-| number\_of\_resource\_groups | Amount of resource group(s) to create for the configuration | `number` | no |
-| resource\_group\_tags | A mapping of tags which should be assigned to the Resource Group. | `list(map(any))` | no |
+| resource\_group\_tags | A mapping of tags which should be assigned to the Resource Group. | `map(string)` | no |
 
 ## Outputs
 
