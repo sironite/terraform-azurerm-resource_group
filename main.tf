@@ -1,8 +1,8 @@
 resource "azurerm_resource_group" "this" {
-  count = var.number_of_resource_groups
-
-  name     = element(var.resource_group_name[*], count.index)
+  for_each = toset(var.resource_group_name) 
+  
+  name     = each.value          
   location = var.azure_location
 
-  tags = element(var.resource_group_tags[*], count.index)
+  tags = var.resource_group_tags
 }
