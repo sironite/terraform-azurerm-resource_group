@@ -1,6 +1,6 @@
 variable "number_of_resource_groups" {
   description = "Amount of resource group(s) to create for the configuration"
-  type        = integer
+  type        = number
   default     = 1
 }
 
