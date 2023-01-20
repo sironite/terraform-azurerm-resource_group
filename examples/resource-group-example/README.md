@@ -13,7 +13,7 @@ Using the modules requires the following pre-requisites:
 
 ```hcl
 module "resource_group" {
-  source  = "TheIronRock95/resourcegroup/azurerm"
+  source  = "sironite/resourcegroup/azurerm"
   version = "x.x.x"
 
   resource_group_name = var.resource_group_name
@@ -24,7 +24,7 @@ module "resource_group" {
 
 ## Authors
 
-The module is maintained by [Wouter Damman](https://github.com/TheIronRock95)
+The module is maintained by [Sironite](https://github.com/sironite)
 
 ## Documentation
 
