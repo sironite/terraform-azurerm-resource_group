@@ -1,5 +1,5 @@
 module "resource_group" {
-  source  = "sironite/resourcegroup/azurerm"
+  source  = "sironite/resource_group/azurerm"
   version = "x.x.x"
 
   resource_group_name = var.resource_group_name
