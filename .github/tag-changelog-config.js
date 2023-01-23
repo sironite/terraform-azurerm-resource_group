@@ -11,9 +11,10 @@ module.exports = {
     { types: ["style"], label: "💅 Code Style Changes" },
     { types: ["chore"], label: "🧹 Chores" },
     { types: ["other"], label: "Other Changes" },
+    { types: ["terraform-docs"], label: "terraform-docs"},
   ],
 
-  excludeTypes: ["other"],
+  excludeTypes: ["other", "terraform-docs"],
 
   renderTypeSection: function (label, commits) {
     let text = `\n## ${label}\n`;

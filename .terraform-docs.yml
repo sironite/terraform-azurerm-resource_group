@@ -8,6 +8,7 @@ content: |-
 
   # Usage - Module
 
+  ## Resource Groups
   ```hcl
   {{ include "examples/resource-group-example/main.tf" }}
   ```
