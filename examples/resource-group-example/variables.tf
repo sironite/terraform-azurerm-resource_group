@@ -1,14 +1,16 @@
 variable "azure_location" {
-  description = "Azure location to use"
+  description = "The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created."
   type        = string
+  sensitive   = false
 }
-
 variable "resource_group_name" {
-  description = "resource group name"
-  type        = list(string)
+  description = "The Name which should be used for this Resource Group. Changing this forces a new Resource Group to be created."
+  type        = list
+  sensitive   = false
 }
-
 variable "resource_group_tags" {
-  description = "resource group tags"
-  type        = list(map(any))
+  description = "A mapping of tags which should be assigned to the Resource Group."
+  type        = map
+  sensitive   = false
+  default     = {}
 }
