@@ -5,17 +5,29 @@ on:
     branches-ignore:
       - main
 
+# Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Documentations
     runs-on: ubuntu-latest
+
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
     steps:
+      
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Git user
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
 
       - name: Regenerate README.md
         uses: terraform-docs/gh-actions@main

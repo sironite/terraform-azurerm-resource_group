@@ -1,8 +1,14 @@
 name: 'Create release'
+
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
